@@ -7,7 +7,8 @@ run	apt-get update
 run	sudo apt-get install -y python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose python-pip unzip
 
 # Jupyter
-run python -m pip install -U pip
+run 	python -m pip install -U pip
+run 	pip install --upgrade packaging 
 run 	sudo pip install jupyter
 run	jupyter notebook --generate-config
 run	echo "c.NotebookApp.ip = '*'" >> ~/.jupyter/jupyter_notebook_config.py 
